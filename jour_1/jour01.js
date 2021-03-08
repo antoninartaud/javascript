@@ -40,3 +40,20 @@ console.log(letters);
 
 var age = 55;
 console.log(`I'm ${age} years old`);
+
+// MDN
+var animalInitial = 'cat'.charAt(1); // returns "a"
+console.log(animalInitial);
+
+var animalInitial1 = 'cat'[1]; // returns "a"
+console.log(animalInitial1);
+
+let longString =
+  'This is a very long string which needs \
+to wrap across multiple lines because \
+otherwise my code is unreadable.';
+console.log(longString);
+
+var changed = 'Bonjour';
+changed = changed.replace('o', 'a');
+console.log(changed);
