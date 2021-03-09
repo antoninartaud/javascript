@@ -55,6 +55,7 @@ otherwise my code is unreadable.';
 console.log(longString);
 
 var changed = 'Bonjour';
+
 changed = changed.replace(/o/g, 'a');
 
 console.log(changed);
