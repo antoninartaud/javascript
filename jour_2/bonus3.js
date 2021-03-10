@@ -1,4 +1,4 @@
-var number = 2.622;
+var number = 2.422;
 var roundedNumber;
 var numberAfterDecimal = number % 1;
 
@@ -16,7 +16,8 @@ var strNumber = number.toString();
 
 strNumber = strNumber.split('.');
 
-var decimalStringNumber = '0' + '.' + strNumber[1];
+var decimalStringNumber = '.' + strNumber[1];
+
 
 if (decimalStringNumber >= 0.5) {
   roundedNumber = Math.ceil(number);
