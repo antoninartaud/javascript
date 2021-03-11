@@ -2,7 +2,7 @@ var myTableau = [];
 var min = 0;
 var max = 100;
 
-for (var i = 0; i <= 20; i++) {
+for (var i = 0; i < 20; i++) {
   // myTableau.push(Math.floor(Math.random() * (max - min) + min));
   myTableau.push(Math.floor(Math.random() * (max - min +1)) + min);
 }

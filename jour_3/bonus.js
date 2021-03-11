@@ -1,16 +1,18 @@
-for (var i = 0; i <= 100; i++) {
-  if (i % 3 === 0) {
-    console.log("fizz");
-  }
-  if (i % 5 === 0) {
-    console.log("buzz");
-  }
-  if (i % 3 === 0 && i % 5 === 0) {
+var limit = 100;
+
+for (var i = 0; i <= limit; i++) {
+  if (i % 3 === 0 && i % 5 === 0){
     console.log("fizzbuzz");
   }
-  if (i % 7 === 0) {
+  else if (i % 5 === 0) {
+    console.log("buzz");
+  }
+  else if  (i % 3 === 0) {
+    console.log("fizz");
+  }
+  else if (i % 7 === 0) {
     console.log("");
   } else {
-    console.log(i);
+    console.log('value of i', i);
   }
 }
