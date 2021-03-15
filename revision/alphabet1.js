@@ -9,6 +9,8 @@ function sortLetters(word) {
   
   myWord = myWord.reverse();
 
+  myWord = myWord.join('');
+
   return myWord;
 }
 
@@ -16,9 +18,6 @@ sortLetters('konexio');
 
 console.log(myWord);
 
-// var word = 'konexio';
 
-// word = word.split('');
 
-// console.log(word);
 
