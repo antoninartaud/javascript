@@ -7,14 +7,14 @@ var password = "";
 function generatePassword(num) {
   if (num < 6 || num > 15) {
     console.log('error');
-    return
+    return;
   }
 
   for (var i = 1; i <= num; i++) {
     word.push(Math.floor(Math.random() * (numMax - numMin + 1)) + numMin);
   }
 
-  for (var i = 0; i < word.length; i++) {
+  for (var j = 0; j < word.length; j++) {
     password += String.fromCharCode(word[i]);
   }
 
