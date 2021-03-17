@@ -4,3 +4,8 @@
 // • Exportez les deux fonctions graces aux modules, et importez les dans votre fichier précedant pour refaire marcher votre code
 // • Affichez la table d'addition
 
+var {multiply, add} = require('./table_utils');
+var number = parseInt(process.argv[2]);
+
+console.log(add(number)) ;
+console.log(multiply(number)) ;
