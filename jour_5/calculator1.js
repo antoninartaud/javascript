@@ -6,6 +6,8 @@
 // ⇒ Si vous ne donnez pas trois arguments, le programme doit afficher "error" dans la console
 
 console.log(process.argv);
+var args = process.argv.length;
+console.log(args);
 
 var firstParameter = parseInt(process.argv[2]);
 // console.log(firstParameter);
@@ -15,7 +17,11 @@ var secondParameter = process.argv[3];
 
 var thirdParameter = parseInt(process.argv[4]);
 
-function calculate(firstParameter, secondParameter, thirdParameter) { 
+function calculate(firstParameter, secondParameter, thirdParameter) {
+  if (args != 5) {
+    console.log('Hey mon gars t\'as pas oublié un paramètre?');
+  }
+
   if ((isNaN(firstParameter) || firstParameter === undefined) ||
     (secondParameter === undefined)||
     (isNaN(thirdParameter) || thirdParameter === undefined)) {
