@@ -5,6 +5,42 @@
 // • Vous devrez donner les arguments dans le terminal en appelant le programme alors attention aux paramètres !
 // ⇒ Si vous ne donnez pas trois arguments, le programme doit afficher "error" dans la console
 
-function calculate(num1, num2, operator) {
-  
+console.log(process.argv);
+
+var firstParameter = parseInt(process.argv[2]);
+// console.log(firstParameter);
+var secondParameter = process.argv[3];
+// console.log(typeof secondParemeter);
+// console.log(typeof undefined);
+
+var thirdParameter = parseInt(process.argv[4]);
+
+function calculate(firstParameter, secondParameter, thirdParameter) { 
+  if ((isNaN(firstParameter) || firstParameter === undefined) ||
+    (secondParameter === undefined)||
+    (isNaN(thirdParameter) || thirdParameter === undefined)) {
+    console.log('Mettez tous les paramètres svp!');
+    return;
+  }
+
+  if (secondParameter === '+') {
+    console.log(`Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${firstParameter + thirdParameter}`);
+
+  } else if (secondParameter === '-') {
+    console.log(`Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${firstParameter - thirdParameter}`);
+
+  } else if (secondParameter === 'x') {
+    console.log(`Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${firstParameter * thirdParameter}`);
+
+  } else if (secondParameter === '/') {
+    console.log(`Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${firstParameter / thirdParameter}`);
+
+  } else if (secondParameter === '%') {
+    console.log(`Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${firstParameter % thirdParameter}`);
+
+  } else {
+    console.log('Vous devez entrer un opérateur valable !');
+  }
 }
+
+calculate(firstParameter, secondParameter, thirdParameter);
