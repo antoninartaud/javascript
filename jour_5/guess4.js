@@ -21,19 +21,40 @@ prompt.start();  // démarre le prompt
 
 function onErr(err) { // permet de gérer les erreurs
   console.log(err);
+  play();
   return;
 }
 
-prompt.get(["userInput", play], function (err, res) {  // demande à obtenir les propriétés "username" et "email"
-  if (err) {
-		return onErr(err);
-	}
-
-  console.log("Données reçues :");
-  console.log("=> Numéro proposé : " + res.userInput); // affiche le résultat pour la propriété "userInput"
-});
-
 function play() {
   console.log('Quel est le nombre mystère ?');
-
+  
+  if (typeof(res.play) !== number) {
+    console.log('you win lucky little bastard !')
+  } else {
+    displayPrompt();
 }
+
+
+// description: "Vous aimez la pizza ? y = yes, n = no" 
+
+function displayPrompt(){
+  
+  prompt.get({
+    play: play()
+  },
+    function (err, res) {
+      if (res.play === mysteryNum) {
+        console.log('Well done mind master !!');
+      } else if(err) {
+		    return onErr(err);
+      } else {
+        play();
+      }
+    });
+}
+ 
+displayPrompt();
+
+// console.log("Données reçues :");
+  // console.log("=> Numéro proposé : " + res.userInput); // affiche le résultat pour la propriété "userInput"
+
