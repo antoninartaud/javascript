@@ -1,0 +1,86 @@
+- Mot 5 lettres: première lettre connu, autres non
+
+- 6 propositions de mot et pour chaque proposition:
+  * bonnes lettres bonne place = couleur rouge
+  * bonnes lettres mauvaise place = couleur jaune
+  * mauvaises lettres = couleur neutre
+
+- Si proposition nombre de lettres erroné = il a perdu
+
+- Aide: package prompt et colors
+
+*************************************************************
+Générer un mot aléatoire de 5 lettres 
+  - Définir une liste de mots de 5 lettres 
+  - Générer un nombre aléatoire qui deviendra l'index du mot choisi dans l'array
+  - Afficher ce mysteryWord en cachant les quatre dernièrs lettres
+
+Affiche Question demandant une proposition
+
+Récupère le mot et le met dans une variable
+
+    - Si mot = 5 lettres
+
+      - oui affiche 1ere lettre et cache les autres
+      - non : perdu
+
+        - Affiche Question demandant un mot
+
+Affiche question pour proposition 1
+
+    - Récupère le mot1 et le met dans une variable
+    - Si mot1 = 5 lettres
+
+      - oui
+
+        - comparaison mot1 avec mot
+
+          - Si mot1 bonnes lettres bonne place 
+
+            - Colorées lettre en rouge 
+
+          - Si mot1 bonnes lettres mauvaise place
+
+            - Colorées lettre en jaune 
+
+          - Si mot1 mauvaises lettres 
+
+            - Colorées lettre en neutre
+
+          - Si toutes les lettres mot1 sont bonnes et bonnes place
+
+            - Afficher "You Win !"
+            - Afficher "Play it again Sam ?"
+
+              - Si oui Afficher Question demandant un mot
+              - Si non Afficher "Game Over"
+      
+      - non : perdu
+
+        - Affiche Question demandant un mot
+
+Affiche question pour proposition 2
+
+  Répéter bloc sous proposition 1
+
+Affiche question pour proposition 3
+
+  Répéter bloc sous proposition 1
+
+Affiche question pour proposition 4
+
+  Répéter bloc sous proposition 1
+
+Affiche question pour proposition 5
+
+  Répéter bloc sous proposition 1
+  Si toutes les lettres du mot1 ne sont pas bonnes et ne sont pas à bonnes place
+
+    - Afficher "You loose"
+    
+      - Afficher "Play it again Sam ?"
+        - Si oui Afficher Question demandant un mot
+        - Si non Afficher "Game Over"
+
+
+

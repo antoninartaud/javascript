@@ -5,7 +5,8 @@
 // • Affichez la table d'addition
 
 var {multiply, add} = require('./table_utils');
-var number = parseInt(process.argv[2]);
+// var number = parseInt(process.argv[2]);
+var number = parseInt(process.argv.slice(2));
 
 console.log(add(number)) ;
 console.log(multiply(number)) ;

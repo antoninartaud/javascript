@@ -1,4 +1,5 @@
-var number = parseInt(process.argv[2]);
+var number = parseInt(process.argv.slice(2));
+// var number = parseInt(argv);
 
 function multiply(number) {
   if (number === undefined) {
