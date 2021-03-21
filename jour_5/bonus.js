@@ -23,24 +23,48 @@ var randomNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + min
 var mysteryWord = randomWordsArray[randomNumber];
 console.log(mysteryWord);
 
+function play() {
+var mysteryWordSplit = mysteryWord.split('');
+console.log('mysteryWordSplit', mysteryWordSplit);
 
-// prompt.start();
+var mysteryWordFirsLetter = mysteryWordSplit.shift();
+console.log('mysteryWordFirsLetter',mysteryWordFirsLetter);
 
-// var properties = {
-//   wordUser: {
-//     pattern: /([a-zA-Z]){5}/g,
-//     message: 'Choose a word with exactly 5 letters please',
-//     required: true
-    
-//   }
-// }
+var mysteryWord4lastLetters = mysteryWordSplit;
+console.log('mysteryWord4lastLetters array', mysteryWord4lastLetters);
 
 
-// prompt.get([{wordUser:}, 'email'], function (err, result) {
-//   //
-//   // Log the results.
-//   //
-//   console.log('Command-line input received:');
-//   console.log('  username: ' + result.username);
-//   console.log('  email: ' + result.email);
-// });
+mysteryWord4lastLetters= mysteryWord4lastLetters.join('').replace(/([a-zA-Z])/g,'*');
+console.log('mysteryWord4lastLetters string', mysteryWord4lastLetters);
+
+var mysteryWordStars = `${mysteryWordFirsLetter}${mysteryWord4lastLetters}`;
+
+console.log(mysteryWordStars);
+
+
+prompt.start();
+
+var schema = {
+  properties: {
+    wordUser: {
+      description: 'What\'s your word ?',
+      pattern: /([a-zA-Z]){5}/g,
+      required: true,
+      message: 'Choose a word with exactly 5 letters please!'
+    },
+  
+  }
+}
+
+
+prompt.get(schema, function (err, result) {
+  
+
+  console.log('Command-line input received:');
+  console.log('Mot choisi: ' + result.wordUser);
+  // console.log('  email: ' + result.email);
+  }
+);
+}
+
+play();

@@ -10,12 +10,21 @@
 - Aide: package prompt et colors
 
 *************************************************************
-Générer un mot aléatoire de 5 lettres 
+Générer un mot aléatoire de 5 lettres = MysteryWord
   - Définir une liste de mots de 5 lettres 
   - Générer un nombre aléatoire qui deviendra l'index du mot choisi dans l'array
-  - Afficher ce mysteryWord en cachant les quatre dernièrs lettres
+ 
+  - Afficher ce mysteryWord en cachant les quatre dernièrs lettres : DECOMPOSITION A FAIRE
+    - Spliter le mysteryWord (string) en array de string
+      - Affecter le premier string(1ère lettre) dans une variable A
+      - Affecter les quatre derniers strings (quatre dernières lettres) dans une variable B
+    - remplacer les quatre dernières lettres par des étoiles
+    - Joindre A et B = mysteryWordStars
+
+Afficher mysteryWordStars
 
 Affiche Question demandant une proposition
+  - 
 
 Récupère le mot et le met dans une variable
 
