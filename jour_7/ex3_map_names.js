@@ -9,10 +9,6 @@ var longNames = [
   },
 ];
 
-// console.log(longNames[0].firstName);
-
-// console.log(longNames[].firstName + ' ' + longNames.lastName);
-
 var shortNames = longNames.map(function (elem) {
   for (i = 0; i < longNames.length; i++) {
     var obj = {};
