@@ -10,10 +10,8 @@ var longNames = [
 ];
 
 var shortNames = longNames.map(function (elem) {
-  for (i = 0; i < longNames.length; i++) {
-    var obj = {};
-    obj.name = elem.firstName + ' ' + elem.lastName;
-    return obj;
-  }
+  var obj = {};
+  obj.name = elem.firstName + ' ' + elem.lastName;
+  return obj;
 });
 console.log(shortNames);
