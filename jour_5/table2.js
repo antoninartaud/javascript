@@ -6,15 +6,15 @@
 
 var number = process.argv[2];
 
+// tester le nombre d'arg
 function multiply(number) {
   if (number === undefined) {
     console.log('Please give me a number');
     return;
   }
-  for (var i = 1; i <= 10; i++){
-    console.log(`${number} x ${i} = ${number * i}`)
+  for (var i = 1; i <= 10; i++) {
+    console.log(`${number} x ${i} = ${number * i}`);
   }
 }
 
 multiply(number);
-

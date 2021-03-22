@@ -19,31 +19,52 @@ var thirdParameter = parseInt(process.argv[4]);
 
 function calculate(firstParameter, secondParameter, thirdParameter) {
   if (args != 5) {
-    console.log('Hey mon gars t\'as pas oublié un paramètre?');
+    console.log("Hey mon gars t'as pas oublié un paramètre?");
   }
 
-  if ((isNaN(firstParameter) || firstParameter === undefined) ||
-    (secondParameter === undefined)||
-    (isNaN(thirdParameter) || thirdParameter === undefined)) {
+  if (
+    isNaN(firstParameter) ||
+    firstParameter === undefined ||
+    secondParameter === undefined ||
+    isNaN(thirdParameter) ||
+    thirdParameter === undefined
+  ) {
     console.log('Mettez tous les paramètres svp!');
     return;
   }
 
+  // switch à faire
+
   if (secondParameter === '+') {
-    console.log(`Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${firstParameter + thirdParameter}`);
-
+    console.log(
+      `Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${
+        firstParameter + thirdParameter
+      }`
+    );
   } else if (secondParameter === '-') {
-    console.log(`Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${firstParameter - thirdParameter}`);
-
+    console.log(
+      `Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${
+        firstParameter - thirdParameter
+      }`
+    );
   } else if (secondParameter === 'x') {
-    console.log(`Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${firstParameter * thirdParameter}`);
-
+    console.log(
+      `Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${
+        firstParameter * thirdParameter
+      }`
+    );
   } else if (secondParameter === '/') {
-    console.log(`Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${firstParameter / thirdParameter}`);
-
+    console.log(
+      `Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${
+        firstParameter / thirdParameter
+      }`
+    );
   } else if (secondParameter === '%') {
-    console.log(`Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${firstParameter % thirdParameter}`);
-
+    console.log(
+      `Le résultat de ${firstParameter} ${secondParameter} ${thirdParameter} est : ${
+        firstParameter % thirdParameter
+      }`
+    );
   } else {
     console.log('Vous devez entrer un opérateur valable !');
   }
