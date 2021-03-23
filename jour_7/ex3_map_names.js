@@ -14,4 +14,13 @@ var shortNames = longNames.map(function (elem) {
   obj.name = elem.firstName + ' ' + elem.lastName;
   return obj;
 });
+
+// corrigé
+
+// var shortNames = longNames.map(function (elem) {
+//   return {
+//     name: elem.firstName + ' ' + elem.lastName,
+//   };
+// });
+
 console.log(shortNames);

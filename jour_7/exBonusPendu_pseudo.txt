@@ -1,0 +1,38 @@
+- mot MYS proposé
+  
+  * Besoin:
+      - Liste de mots
+        - création d'un array de mots
+
+      - Choix d'un mot aléatoire
+        - Maths randoms
+      
+      - Remplacer chaque lettre du mot par _ 
+        - regex word = word.replace(/./g, '_ ');
+
+- var MYSarray de caractères à créer
+
+- joueur a le droit à 10 tentatives PROP
+  * Besoin:
+      - Capture de PROP via package prompt
+
+      - Pattern à créer pour valider que PROP n'a que des lettres.
+
+      - loop through the validation process de PROP
+
+          - Procédure de validation du mot PROP
+          * Besoin:
+              - PROP transformé en array de caractères
+                  var PROParray à créer
+              - loop sur PROParray
+                - comparaison avec MYSarray
+                    MYS transormé en array de caractères MYSarray
+
+      - loop sur MYSarray pr savoir si lettre de PROParray existe
+        - si oui 
+          - affiche lettre 
+
+      - si lettre absent du mot MYS
+    - affiche message "oops..plus que x essais"
+    - x représente le nbre de tentatives restantes 
+- affiche message victoire ou défaite
