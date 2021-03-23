@@ -26,18 +26,28 @@ var cakes = [
   },
 ];
 
-var cakesSoldOut = cakes.map(function (elem) {
-  if (elem.flavor === 'chocolate') {
+// var cakesSoldOut = cakes.map(function (elem) {
+//   if (elem.flavor === 'chocolate') {
+//     elem.status = 'sold out';
+//   }
+//   return elem;
+// });
+
+// console.log(cakesSoldOut);
+
+// var cakesSoldOutList = cakesSoldOut.filter(function (elem) {
+//   if (elem.status === 'sold out') {
+//     return elem;
+//   }
+// });
+
+var cakesChocolate = cakes
+  .filter(function (elem) {
+    return elem.flavor === 'chocolate';
+  })
+  .map(function (elem) {
     elem.status = 'sold out';
-  }
-  return elem;
-});
-
-console.log(cakesSoldOut);
-
-var cakesSoldOutList = cakesSoldOut.filter(function (elem) {
-  if (elem.status === 'sold out') {
     return elem;
-  }
-});
-console.log(cakesSoldOutList);
+  });
+
+console.log(cakesChocolate);
