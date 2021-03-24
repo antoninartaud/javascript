@@ -8,9 +8,12 @@ function getCountries() {
     function (err, res, body) {
       var result = JSON.parse(body);
 
-      for (var i = 0; i < result.length; i++) {
-        countriesNames.push(result[i].name);
-      }
+      // for (var i = 0; i < result.length; i++) {
+      //   countriesNames.push(result[i].name);
+      // }
+      countriesNames = result.map(function (elem) {
+        return elem.name;
+      });
       console.log(typeof countriesNames);
 
       countriesNames = JSON.stringify(countriesNames);
