@@ -1,7 +1,5 @@
 var request = require('request');
 
-var countriesNames = [];
-
 function getCountries() {
   request.get(
     'https://restcountries.eu/rest/v1/all',
@@ -11,17 +9,21 @@ function getCountries() {
       // for (var i = 0; i < result.length; i++) {
       //   countriesNames.push(result[i].name);
       // }
-      countriesNames = result.map(function (elem) {
+      var countriesNames = result.map(function (elem) {
         return elem.name;
       });
-      console.log(typeof countriesNames);
+      // console.log(typeof countriesNames);
 
-      countriesNames = JSON.stringify(countriesNames);
-      console.log(typeof countriesNames);
-      // countriesNames.join('-');
-      countriesNames = countriesNames.replace(/"+/g, '');
-      countriesNames = countriesNames.replace(/,/g, '-');
-      countriesNames = countriesNames.replace(/[]/g, '');
+      // countriesNames = JSON.stringify(countriesNames); (countriesNames.toString())
+      // console.log(typeof countriesNames);
+      // // countriesNames.join('-');
+      // countriesNames = countriesNames.replace(/"+/g, '');
+      // countriesNames = countriesNames.replace(/,/g, '-');
+      // countriesNames = countriesNames.replace(/[]/g, '');
+
+      //CORRIGE
+      countriesNames = countriesNames.join(' - ');
+
       console.log(countriesNames);
     }
   );

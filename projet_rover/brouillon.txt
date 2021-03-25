@@ -1,0 +1,9 @@
+objectif = piloter un rover sur mars
+
+règles déplacement rover:
+  - tourner à gauche = 
+    - tourne à gauche et avance tout droit
+  
+Terrain =
+  - grille de 10x10 cases 
+
