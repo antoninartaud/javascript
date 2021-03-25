@@ -53,10 +53,13 @@ function pilotRover(command) {
 }
 
 function savePositionLog() {
-  rover.travelLog.push(rover.x + rover.y);
+  rover.travelLog.push(`${rover.x}, ${rover.y}`);
 }
 
 pilotRover('f');
 
-console.log(rover.direction);
-console.log(rover.x);
+savePositionLog();
+
+console.log('rover.direction', rover.direction);
+console.log('rover.x', rover.x);
+console.log('travelLog', rover.travelLog);
