@@ -1,6 +1,13 @@
 - pilotRover() vérifier si le fonctionnement correspond à l'énoncé pour le déplacement sur la grille et la modification des x,y sur grille
-  
  OK
 --------------------------------
 
-- travellog() ne se met pas à jour, cela ne met pas à jour la dernière position
+- pilot(r) après pilot(f) direction revient à N
+
+--------------------------------
+
+- travellog() ne se met pas à jour, cela ne met pas à jour la dernière position 
+OK
+--------------------------------
+
+- moveforward() à réécrire

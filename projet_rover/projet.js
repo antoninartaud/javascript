@@ -17,8 +17,10 @@ var grid = [
 
 var rover = {
   direction: 'N',
-  x: 0,
-  y: 0,
+  position: {
+    x: 0,
+    y: 0,
+  },
   travelLog: [],
 };
 
@@ -32,51 +34,56 @@ function turnRight(vehicle) {
 }
 
 function moveforward(vehicle) {
-  console.log('before if moveforward');
+  // console.log('before if moveforward');
   if (vehicle.direction === 'E') {
-    console.log('moveforwardE');
+    vehicle.position.x = vehicle.position.x + 1;
   } else if (vehicle.direction === 'W') {
-    vehicle.y = vehicle.y + 1;
+    vehicle.position.y + 1;
   }
 }
 
 function pilotRover(command) {
-  switch (command) {
-    case 'l':
-      console.log('switch l');
-
-      turnLeft(rover);
-      break;
-    case 'r':
-      console.log('switch r');
-      turnRight(rover);
-      break;
-    case 'f':
-      console.log('switch f');
-
-      moveforward(rover);
-      break;
-    default:
-      console.log('Please... i want to go back to Earth');
+  savePositionLog();
+  console.log(rover.travelLog);
+  command = command.split('');
+  for (var i = 0; i < command.length; i++) {
+    switch (command[i]) {
+      case 'l':
+        console.log('switch l');
+        turnLeft(rover);
+        break;
+      case 'r':
+        console.log('switch r');
+        turnRight(rover);
+        break;
+      case 'f':
+        console.log('switch f');
+        moveforward(rover);
+        break;
+      default:
+        console.log('Please... i want to go back to Earth');
+    }
   }
 }
 
 function savePositionLog() {
-  rover.travelLog.push(`${rover.x}, ${rover.y}`);
-  // rover.travelLog = [];
+  rover.travelLog.push(`${rover.position.x},${rover.position.y}`);
 }
 
 // Tests fonctions commandes
 // turnRight(rover);
 // moveforward(rover);
-pilotRover('f');
 
-savePositionLog();
+pilotRover('rf');
+
+// var positionX = rover.position.x + 1;
+
+// console.log(positionX);
 
 console.log('rover.direction', rover.direction);
 console.log('travelLog', rover.travelLog);
-console.log('rover.x', rover.x);
-console.log('rover.y', rover.y);
+console.log('rover.Postionx', rover.position.x);
+console.log('rover.y', rover.position.y);
 
 // prompt.start();
 
