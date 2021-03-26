@@ -1,0 +1,22 @@
+Objectif = piloter un Rover sur mars
+
+Terrain =
+  - grille de 10x10 cases 
+
+Règles déplacement rover:
+
+  1) Affecter une nouvelle valeur à direction de Rover
+      - turnRight = E = X = Colonne
+      - turnLeft = W = Y = Ligne
+
+  2) faire avancer Rover
+      - moveForward change les coordonnées de Rover +1
+        - si valeur direction = E 
+          - alors x + 1
+        - sinon valeur direction = W 
+          - alors Y + 1
+  
+
+  
+
+
