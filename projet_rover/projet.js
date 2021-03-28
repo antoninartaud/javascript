@@ -34,11 +34,13 @@ function turnRight(vehicle) {
 }
 
 function moveforward(vehicle) {
-  // console.log('before if moveforward');
+  console.log('before if moveforward');
+  console.log('vehicle', vehicle);
   if (vehicle.direction === 'E') {
-    vehicle.position.x = vehicle.position.x + 1;
+    vehicle.position.x++;
+    console.log('vehicle.position.x', vehicle.position.x);
   } else if (vehicle.direction === 'W') {
-    vehicle.position.y + 1;
+    vehicle.position.y++;
   }
 }
 
